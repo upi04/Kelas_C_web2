@@ -7,6 +7,6 @@
     <title>Laporan 1 Web 2</title>
 </head>
 <body>
-<h1>Nabil Hakim, NIM: 60200123094</h1>
+    <h1>Nabil Hakim, NIM: 60200123094</h1>
 </body>
 </html>
