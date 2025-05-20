@@ -7,3 +7,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/biodata', [BiodataController::class, 'index']);
+Route::get('/about', function () {
+    return view('about');
+});
