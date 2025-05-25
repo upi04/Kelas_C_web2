@@ -4,58 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biodata Diri</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            font-family: Arial, sans-serif;
-        }
+     <style>
+    .biodata {
+        max-width: 600px;
+        margin: 20px auto;
+        font-family: Arial, sans-serif;
+    }
 
-        h1 {
-            text-align: center;
-            margin-top: 50px;
-        }
+    .biodata table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 15px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
 
-        img {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 100px;
-        }
+    .biodata th {
+        background-color: palevioletred;
+        color: white;
+        text-align: left;
+        padding: 10px;
+        font-size: 16px;
+        text-transform: capitalize;
+    }
 
-        .biodata {
-            max-width: 600px;
-            margin: 50px auto;
-        }
+    .biodata td {
+        background-color: #f9f9f9;
+        padding: 10px;
+        border-top: 1px solid #ddd;
+        font-size: 15px;
+    }
 
-        ul, ol {
-            margin-left: 30px;
-        }
+    h1 {
+        text-align: center;
+        font-family: 'Segoe UI', sans-serif;
+        margin-bottom: 30px;
+        color: #333;
+    }
     </style>
+
 </head>
 <body>
     <img src="Afiqa.jpg" alt="Foto">
     <h1>BIODATA DIRI</h1>
 
     <div class="biodata">
-        <ul>
-            <li><strong>Nama:</strong> Afiqa Aulia Ahsani</li>
-            <li><strong>NIM:</strong> 60200123082</li>
-            <li><strong>Tempat, Tanggal Lahir:</strong> Jeneponto, 30 Juni 2005</li>
-            <li><strong>Jenis Kelamin:</strong> Perempuan</li>
-            <li><strong>Alamat:</strong> Jeneponto</li>
-            <li><strong>Status:</strong> Belum Menikah</li>
-            <li><strong>Agama:</strong> Islam</li>
-            
-            
-        </ul>
+       @foreach ($Biodata as $key => $Bio)
 
-        <h3>Hobi:</h3>
-        <ol>
-            <li>Membaca buku</li>
-            <li>Tidurrr</li>
-            <li>Traveling</li>
-        </ol>
+       <table>
+        <tr>
+            <th>{{ ucwords(str_replace('-', ' ', $key)) }}</th>
+        </tr>
+        <tr>
+            <td>{{ $Bio }}</td>
+        </tr>   
+       </table>
+       @endforeach
+       
     </div>
 </body>
 </html>
