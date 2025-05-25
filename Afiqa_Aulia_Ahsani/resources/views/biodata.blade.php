@@ -44,6 +44,7 @@
             <li><strong>Tempat, Tanggal Lahir:</strong> Jeneponto, 30 Juni 2005</li>
             <li><strong>Jenis Kelamin:</strong> Perempuan</li>
             <li><strong>Alamat:</strong> Jeneponto</li>
+            <li><strong>Status:</strong> Belum Menikah</li>
             
         </ul>
 
