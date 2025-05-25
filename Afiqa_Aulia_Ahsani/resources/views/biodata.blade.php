@@ -45,6 +45,8 @@
             <li><strong>Jenis Kelamin:</strong> Perempuan</li>
             <li><strong>Alamat:</strong> Jeneponto</li>
             <li><strong>Status:</strong> Belum Menikah</li>
+            <li><strong>Agama:</strong> Islam</li>
+            
             
         </ul>
 
