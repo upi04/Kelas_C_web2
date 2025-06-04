@@ -1,0 +1,1 @@
+<?php /**PATH E:\Kelas_C_web2\Wira_Fadhil\project-laravel\resources\views/Biodata/home.blade.php ENDPATH**/ ?>
