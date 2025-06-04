@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laporan 3 Pemrograman Web 2</title>
     <style>
+        html {
+            background-color: white;
+            color: black;
+        }
         div {
             margin: 1rem 2rem;
         }

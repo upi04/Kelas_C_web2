@@ -6,9 +6,9 @@
         @csrf
         <div class="flex flex-col gap-2 mx-0! my-4!">
             <label for="name">Name</label>
-            <input class="input" type="text" name="name" required>
+            <input class="input input-primary text-black bg-white" type="text" name="name" required>
             <label for="name">Message</label>
-            <textarea class="textarea" name="message" required></textarea>
+            <textarea class="textarea textarea-primary text-black bg-white" name="message" required></textarea>
             <button class="btn btn-primary w-max" type="submit">Submit</button>
         </div>
     </form>
