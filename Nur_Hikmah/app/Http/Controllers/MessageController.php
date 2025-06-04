@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 class MessageController extends Controller
 {
     public $message = [
-        1 => ['name' => 'Nakim', 'message' => 'Hello World'],
-        2 => ['name' => 'Nabil', 'message' => 'Selamat datang di Laravel'],
-        3 => ['name' => 'Hikmah', 'message' => 'Apa itu Laravel?'],
+        0 => ['name' => 'Nakim', 'message' => 'Hello World'],
+        1 => ['name' => 'Nabil', 'message' => 'Selamat datang di Laravel'],
+        2 => ['name' => 'Hikmah', 'message' => 'Apa itu Laravel?'],
     ];
 
     public function store(Request $request)
