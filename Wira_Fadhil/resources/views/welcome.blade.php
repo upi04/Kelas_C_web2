@@ -6,12 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <div style="text-align: center; margin-top: 50px;">    
-        <h1>BIODATA</h1>
-        <p>Nama : Wira Fadhil</p>
-        <p>NIM : 60200123086</p>
-        <p>Prodi : Teknik Informatika</p>
-    </div>
-
+    <ol>
+        <li><a href="home">Biodata</a></li>
+        <li><a href="Biodata.about">Klik produk</a></li>
+   </ol>
 </body>
 </html>

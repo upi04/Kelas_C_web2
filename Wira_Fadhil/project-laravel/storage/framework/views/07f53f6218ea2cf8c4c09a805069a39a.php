@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol>
+        <li><a href="home">Biodata</a></li>
+        <li><a href="Biodata.about">Klik produk</a></li>
+   </ol>
+</body>
+</html><?php /**PATH E:\Kelas_C_web2\Wira_Fadhil\project-laravel\resources\views/welcome.blade.php ENDPATH**/ ?>
