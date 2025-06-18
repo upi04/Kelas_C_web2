@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\Cpert4;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\SkillController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContohController;
@@ -24,3 +27,7 @@ Route::get('/skill', [SkillController::class, 'index']);
 Route::get('/message', [MessageController::class, 'index']);
 Route::post('/message', [MessageController::class, 'store']);
 Route::get('/message/delete/{id}', [MessageController::class, 'destroy']);
+Route::get('/pertemuan4', [Cpert4::class, 'index']);
+
+Route::get('/book', [BookController::class, 'index']);
+Route::get('/student', [StudentController::class, 'index']);
