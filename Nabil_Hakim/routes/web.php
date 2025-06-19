@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\Cpert4;
+use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\StudentController;
@@ -12,7 +13,7 @@ use App\Http\Controllers\BiodataController;
 use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/home');
 });
 Route::get('/about', function () {
     return view('about');
@@ -31,3 +32,7 @@ Route::get('/pertemuan4', [Cpert4::class, 'index']);
 
 Route::get('/book', [BookController::class, 'index']);
 Route::get('/student', [StudentController::class, 'index']);
+
+Route::get('/mahasiswa/create', [MahasiswaController::class, 'create']);
+Route::post('/mahasiswa', [MahasiswaController::class, 'store']);
+Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
