@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Mahasiswa;
 use Illuminate\Http\Request;
 
+// Laporan 5
+
 class MahasiswaController extends Controller
 {
     public function create()

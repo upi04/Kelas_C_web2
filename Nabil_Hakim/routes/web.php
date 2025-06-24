@@ -33,6 +33,7 @@ Route::get('/pertemuan4', [Cpert4::class, 'index']);
 Route::get('/book', [BookController::class, 'index']);
 Route::get('/student', [StudentController::class, 'index']);
 
+// Laporan 5
 Route::get('/mahasiswa/create', [MahasiswaController::class, 'create']);
 Route::post('/mahasiswa', [MahasiswaController::class, 'store']);
 Route::get('/mahasiswa', [MahasiswaController::class, 'index']);

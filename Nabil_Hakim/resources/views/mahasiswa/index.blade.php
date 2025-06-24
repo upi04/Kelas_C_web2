@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    {{-- Laporan 5 --}}
     <title>Daftar Mahasiswa</title>
 </head>
 
@@ -20,7 +21,7 @@
         @endforeach
     </table>
     <br />
-    <button><a href="/mahasiswa/create">Tambah Mahasiswa</a></button>
+    <button onclick="location.href='/mahasiswa/create'">Tambah Mahasiswa</button>
 </body>
 
 </html>
