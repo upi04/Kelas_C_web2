@@ -1,12 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Biodata;
+use App\Http\Controllers\MahasiswaController;
 
-route ::get('/biodata', [Biodata::class, 'HomeController']);
+Route::get('/', [MahasiswaController::class, 'index']); 
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
+Route::get('/mahasiswa/create', [MahasiswaController::class, 'create']);
+Route::post('/mahasiswa', [MahasiswaController::class, 'store']);
+Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
