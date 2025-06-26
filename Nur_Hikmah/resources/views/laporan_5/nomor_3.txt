@@ -1,0 +1,78 @@
+Perbedaan GET vs POST:
+
+=========================================
+||                                     ||
+||     G G G G  E E E E E  T T T T T   ||
+||   G          E              T       ||
+||   G          E              T       ||
+||   G   G G G  E E E E E      T       ||
+||   G       G  E              T       ||
+||   G       G  E              T       ||
+||     G G G    E E E E E      T       ||
+||                                     ||
+=========================================
+
+-> Data dikirim melalui URL (query string).
+-> Tidak aman untuk data sensitif (karena terlihat di URL).
+-> Cocok untuk permintaan data (read-only), seperti pencarian atau tampilan data.
+-> Dapat dibookmark & di-cache.
+
+Contoh penggunaan GET di Laravel
+Route:
+// web.php
+Route::get('/cari-produk', [ProdukController::class, 'cari']);
+
+Controller:
+// ProdukController.php
+public function cari(Request $request) {
+    $keyword = $request->query('keyword'); // Ambil dari query string
+    $produk = Produk::where('nama', 'like', "%$keyword%")->get();
+    return view('produk.hasil', compact('produk'));
+}
+
+Url Akses:
+http://localhost:8000/cari-produk?keyword=sepatu
+
+
+
+====================================================
+||                                                ||
+||   P P P P      O O O      S S S    T T T T T   ||
+||   P       P  O       O  S              T       ||
+||   P       P  O       O  S              T       ||
+||   P P P P    O       O    S S S        T       ||
+||   P          O       O          S      T       ||
+||   P          O       O          S      T       ||
+||   P            O O O      S S S        T       ||
+||                                                ||
+====================================================
+
+-> Data dikirim melalui body permintaan.
+-> Lebih aman karena data tidak terlihat di URL.
+-> Cocok untuk mengirim/menyimpan data (create/update).
+-> Tidak bisa dibookmark, tidak di-cache.
+
+Contoh penggunaan POST di Laravel
+Route:
+// web.php
+Route::post('/produk', [ProdukController::class, 'simpan']);
+
+Controller:
+// ProdukController.php
+public function simpan(Request $request) {
+    $produk = new Produk;
+    $produk->nama = $request->input('nama');
+    $produk->harga = $request->input('harga');
+    $produk->save();
+
+    return redirect('/produk')->with('success', 'Produk berhasil disimpan.');
+}
+
+Form di View:
+<!-- create.blade.php -->
+<form action="/produk" method="POST">
+    @csrf
+    <input type="text" name="nama" placeholder="Nama Produk">
+    <input type="number" name="harga" placeholder="Harga Produk">
+    <button type="submit">Simpan</button>
+</form>

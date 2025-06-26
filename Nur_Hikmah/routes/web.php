@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\contohcontroller;
 use App\Http\Controllers\BiodataController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\SkillController;
 
@@ -28,3 +31,10 @@ Route::get('/skill', [SkillController::class, 'index']);
 Route::get('/message', [MessageController::class, 'index']);
 Route::post('/message', [MessageController::class, 'store']);
 Route::get('/message/delete/{id}', [MessageController::class, 'destroy']);
+
+Route::get('/book', [BookController::class, 'index']);
+Route::get('/student', [StudentController::class, 'index']);
+Route::get('/mahasiswa/create', [MahasiswaController::class, 'create']);
+Route::post('/mahasiswa', [MahasiswaController::class, 'store']);
+
+Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
